@@ -9,7 +9,7 @@ function AboutMe() {
         {/* Image */}
         <img 
           src="/myImg.png" 
-          alt="My Image" 
+          alt="Img" 
           className="w-48 md:w-60 lg:w-72 h-auto rounded-full opacity-85 object-cover"
         />
 

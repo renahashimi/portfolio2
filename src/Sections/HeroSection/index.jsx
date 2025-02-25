@@ -3,7 +3,7 @@ import React from "react";
 function HeroSection() {
   return (
     <div
-      className="bg-cover bg-bottom flex flex-col items-center justify-center sm:items-start h-[600px] text-white"
+      className="bg-cover bg-bottom flex flex-col items-center justify-center sm:items-start h-[600px] md:h-[800px] text-white"
       style={{ backgroundImage: "url('/backImg.jpg')" }}
       aria-label="Hero Section"
     >
