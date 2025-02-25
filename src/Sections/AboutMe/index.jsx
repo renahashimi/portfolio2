@@ -2,8 +2,8 @@ import React from "react";
 
 function AboutMe() {
   return (
-    <section id="about" className="min-h-screen flex flex-col items-center justify-center text-white mx-auto max-w-4xl px-6">
-      <h2 className="mb-10 text-3xl md:text-5xl text-custom-light tracking-wider font-play font-bold uppercase text-center">About Me</h2>
+    <section id="about" className="min-h-screen flex flex-col items-center justify-center text-white mx-auto mt-[30px] lg:mt-0">
+      <h2 className="mb-10 w-full py-2 text-3xl md:text-4xl tracking-widest font-play font-black uppercase text-center bg-custom-light text-black">About Me</h2>
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
         {/* Image */}

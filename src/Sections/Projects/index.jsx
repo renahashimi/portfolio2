@@ -35,7 +35,7 @@ function Projects() {
 
   return (
     <section id="projects" className="min-h-screen flex flex-col items-center justify-center text-white mt-[100px]">
-      <h2 className="mb-10 text-3xl md:text-5xl tracking-widest font-play font-bold uppercase text-center text-custom-light">Projects</h2>
+      <h2 className="mb-10 w-full py-2 text-3xl md:text-4xl tracking-widest font-play font-black uppercase text-center bg-custom-light text-black">Projects</h2>
 
       {/* Project Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6">

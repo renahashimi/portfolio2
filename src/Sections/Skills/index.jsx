@@ -8,7 +8,7 @@ import { VscVscodeInsiders } from "react-icons/vsc";
 function Skills() {
   return (
     <div id="skills" className="flex flex-col items-center justify-center text-white">
-      <h2 className="mb-10 text-3xl md:text-5xl text-custom-light tracking-wider font-play font-bold uppercase text-center">Skills</h2>
+      <h2 className="mb-10 w-full py-2 text-3xl md:text-4xl tracking-widest font-play font-black uppercase text-center bg-custom-light text-black">Skills</h2>
 
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-center">
         <SkillCard icon={<FaHtml5 className="hover:text-orange-500" />} name="HTML" />
