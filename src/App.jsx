@@ -17,11 +17,11 @@ function App() {
       {/* Hero Section with Background Image */}
         <HeroSection />
 
-      {/* Skills Section */}
-        <Skills />
-  
       {/* Projects Section */}
         <Projects />
+
+      {/* Skills Section */}
+        <Skills />
 
       {/* About Me Section */}
         <AboutMe />
