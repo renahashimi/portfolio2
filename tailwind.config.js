@@ -7,6 +7,7 @@ module.exports = {
         prata: ['"Prata"', 'serif'],
         lora: ['"Lora"', 'serif'],
         play: ['"Playfair Display SC"', 'serif'],
+        allison: ['"Allison"', 'serif']
       },
       fontWeight: {
         thin: 100,
@@ -20,7 +21,7 @@ module.exports = {
         black: 900,
       },
       colors: {
-        'custom-light': '#C5BBBB',
+        'custom-light': '#BBAFAF',
         'custom-medium': '#998787',
         'custom-dark': '#6E5D5D',
       },
