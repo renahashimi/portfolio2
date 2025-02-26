@@ -1,21 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import icons from react-icons
 
 function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 bg-black bg-opacity-90 flex text-white sm:tracking-wider md:text-xl w-full p-4 font-play uppercase justify-center space-x-6 md:space-x-12 z-50"
-      aria-label="Main Navigation"
-    >
-      <a href="#projects" className="cursor-pointer hover:text-gray-400" aria-label="Projects">
-        Projects
-      </a>
-      <a href="#about" className="cursor-pointer hover:text-gray-400" aria-label="About Me">
-        About Me
-      </a>
-      <a href="#contact" className="cursor-pointer hover:text-gray-400" aria-label="Contact">
-        Contact
-      </a>
-    </nav>
+    <header className="fixed flex justify-between items-center top-0 left-0 right-0 z-50 bg-black bg-opacity-90 border-b-2 border-pink-500 text-white sm:tracking-wider w-full p-4 font-play uppercase">
+      <div className="flex items-center">
+        {/* Logo & Name */}
+        <div className="flex items-center">
+          <img src="/logo2.png" alt="Logo" className="w-12 h-auto"/>
+          <h2 className="text-custom-light font-prata ms-3 mt-2">Rena Hashimi</h2>
+        </div>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <button 
+        className="md:hidden text-white ml-auto flex justify-end focus:outline-none"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle Navigation"
+      >
+        {isOpen ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+      </button>
+
+      {/* Navigation Menu */}
+      <nav
+        className={`absolute md:relative top-20 md:top-0 left-0 w-full md:w-auto bg-black md:bg-transparent 
+        md:flex transition-all duration-300 ease-in-out 
+        ${isOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0 md:opacity-100 md:scale-y-100"} 
+        origin-top md:origin-center backdrop-blur-md shadow-lg md:shadow-none rounded-md md:rounded-none`}
+        aria-label="Main Navigation"
+      >
+        <ul className="flex flex-col md:flex-row md:space-x-8 text-center md:text-left p-4 md:p-0">
+          <li><a href="#projects" className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">Projects</a></li>
+          <li><a href="#skills" className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">Skills</a></li>
+          <li><a href="#about" className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">About Me</a></li>
+          <li><a href="#contact" className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
   );
 }
 

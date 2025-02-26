@@ -3,18 +3,22 @@ import React from "react";
 function AboutMe() {
   return (
     <section id="about" className="min-h-screen flex flex-col items-center justify-center text-white mx-auto mt-[30px] lg:mt-0">
-      <h2 className="mb-10 w-full py-2 text-3xl md:text-4xl tracking-widest font-play font-black uppercase text-center bg-custom-light text-black">About Me</h2>
-
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+     <div className="relative h-16 w-full mb-6 border-t-4 border-b-2 border-pink-600">
+      <img src="/back3.jpg" alt="Background" className="w-full h-full object-cover" />
+        <h2 className="absolute inset-0 flex items-center justify-end pe-6 text-3xl md:text-4xl tracking-widest font-play font-bold uppercase text-center bg-black bg-opacity-10 text-custom-light">
+          About Me
+        </h2>
+      </div>
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-10 mt-[60px]">
         {/* Image */}
         <img 
           src="/myImg.png" 
           alt="Img" 
-          className="w-48 md:w-60 lg:w-72 h-auto rounded-full opacity-85 object-cover"
+          className="w-48 md:w-60 lg:w-72 h-auto rounded-full opacity-85 object-cover md:rounded-none md:border-2 md:border-custom-dark md:shadow-[0_0_15px_#ff00ff] md:mt-[50px] transition-all duration-300"
         />
 
         {/* Content */}
-        <div className="max-w-lg text-center md:text-left font-lora text-lg space-y-4">
+        <div className="max-w-lg text-center md:text-left font-lora text-lg space-y-4 p-3">
           <p className="text-2xl font-black text-custom-light">Hi, I'm Rena!</p>
 
           <p>
