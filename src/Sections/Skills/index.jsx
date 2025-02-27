@@ -7,13 +7,13 @@ import { VscVscodeInsiders } from "react-icons/vsc";
 
 function Skills() {
   return (
-    <div id="skills" className="flex flex-col items-center justify-center text-white mt-[100px]">
-      <div className="relative h-16 w-full mb-6 border-t-4 border-b-2 border-pink-600">
-      <img src="/back3.jpg" alt="Background" className="w-full h-full object-cover" />
-        <h2 className="absolute inset-0 flex items-center justify-end pe-6 text-3xl md:text-4xl tracking-widest font-play font-bold uppercase text-center bg-black bg-opacity-10 text-custom-light">
-          My Tech Stack
-        </h2>
-      </div>
+    <div id="skills" className="h-screen flex flex-col items-center justify-center text-white">
+      <h2
+        className="mb-10 text-7xl md:text-8xl text-white tracking-wider font-allison font-bold text-center pt-[60px]"
+        style={{ textShadow: "5px 8px 6px #6E5D5D" }}
+      >
+        My Tech Stack
+      </h2>
       <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 gap-6 lg:gap-x-12 text-center items-center pt-[60px]">
         <SkillCard icon={<FaHtml5 className="text-orange-500" />} name="HTML" />
         <SkillCard icon={<FaCss3Alt className="text-blue-500" />} name="CSS" />

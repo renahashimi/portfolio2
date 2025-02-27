@@ -5,12 +5,15 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed flex justify-between items-center top-0 left-0 right-0 z-50 bg-black bg-opacity-90 border-b-2 border-pink-500 text-white sm:tracking-wider w-full p-4 font-play uppercase">
+    <header className="fixed flex justify-between items-center top-0 left-0 right-0 z-50 bg-black bg-opacity-90 border-b-2 border-custom-dark text-white sm:tracking-wider w-full p-4 font-play uppercase">
       <div className="flex items-center">
         {/* Logo & Name */}
         <div className="flex items-center">
           <img src="/logo2.png" alt="Logo" className="w-12 h-auto"/>
-          <h2 className="text-custom-light font-prata ms-3 mt-2">Rena Hashimi</h2>
+          {/* Make the h2 clickable and link to #home */}
+          <a href="#home">
+            <h2 className="text-custom-light font-prata ms-3 mt-2">Rena Hashimi</h2>
+          </a>
         </div>
       </div>
 
