@@ -7,7 +7,9 @@ module.exports = {
         prata: ['"Prata"', 'serif'],
         lora: ['"Lora"', 'serif'],
         play: ['"Playfair Display SC"', 'serif'],
-        allison: ['"Allison"', 'serif']
+        allison: ['"Allison"', 'serif'],
+        alex: ['"Alex Brush"', 'serif'],
+        lobster: ['"Lobster Two"', 'serif']
       },
       fontWeight: {
         thin: 100,

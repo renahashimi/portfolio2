@@ -7,30 +7,35 @@ import AboutMe from "./Sections/AboutMe";
 import Contact from "./Sections/Contact";
 import GoUpButton from "./Helpers/GoUpBtn";
 
-
 function App() {
   return (
-    <div className="bg-black min-h-screen">
-      {/* Navbar */}
+    <div
+      className="bg-black"
+    
+    >
+      {/* Main Content */}
+      <div className="relative z-10 bg-black max-w-[1400px] mx-auto border-4 border-custom-medium shadow-[0_0_35px_#998787] transition-all duration-300">
+        {/* Navbar */}
         <NavBar />
 
-      {/* Hero Section with Background Image */}
+        {/* Hero Section */}
         <HeroSection />
 
-      {/* Projects Section */}
+        {/* Projects Section */}
         <Projects />
 
-      {/* Skills Section */}
+        {/* Skills Section */}
         <Skills />
 
-      {/* About Me Section */}
+        {/* About Me Section */}
         <AboutMe />
 
-      {/* Contact Section */}
+        {/* Contact Section */}
         <Contact />
 
-      {/* Helpers */}
+        {/* Helpers */}
         <GoUpButton />
+      </div>
     </div>
   );
 }
