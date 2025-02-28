@@ -9,32 +9,42 @@ import GoUpButton from "./Helpers/GoUpBtn";
 
 function App() {
   return (
-    <div
-      className="bg-black"
-    
-    >
+    <div className="bg-black">
       {/* Main Content */}
       <div className="relative z-10 bg-black max-w-[1400px] mx-auto border-4 border-custom-medium shadow-[0_0_35px_#998787] transition-all duration-300">
+        
         {/* Navbar */}
-        <NavBar />
+        <div className="py-5">
+          <NavBar />
+        </div>
 
         {/* Hero Section */}
-        <HeroSection />
+        <div className="py-16">
+          <HeroSection />
+        </div>
 
         {/* Projects Section */}
-        <Projects />
+        <div className="py-16">
+          <Projects />
+        </div>
 
         {/* Skills Section */}
-        <Skills />
+        <div className="py-16">
+          <Skills />
+        </div>
 
         {/* About Me Section */}
-        <AboutMe />
+        <div className="py-16">
+          <AboutMe />
+        </div>
 
         {/* Contact Section */}
-        <Contact />
+        <div className="pt-16">
+          <Contact />
+        </div>
 
         {/* Helpers */}
-        <GoUpButton />
+          <GoUpButton />
       </div>
     </div>
   );

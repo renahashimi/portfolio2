@@ -9,7 +9,7 @@ function Skills() {
   return (
     <div id="skills" className="h-screen flex flex-col items-center justify-center text-white">
       <h2
-        className="mb-10 text-7xl md:text-8xl text-white tracking-wider font-allison font-bold text-center pt-[60px]"
+        className="mb-10 text-6xl sm:text-7xl md:text-8xl text-white tracking-wider font-allison font-bold text-center pt-[60px]"
         style={{ textShadow: "5px 8px 6px #6E5D5D" }}
       >
         My Tech Stack

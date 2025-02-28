@@ -1,40 +1,7 @@
 import React, { useState } from "react";
+import projects from "./projectsData";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-const projects = [
-  {
-    id: 1,
-    name: "Holidaze",
-    title: "Project Exam 2",
-    image: "/Holidaze.jpg",
-    description: "Holidaze is a modern, user-friendly holiday venue booking platform I built as part of my final exam in Front-End Development at Noroff. The goal of the project was to demonstrate my ability to create dynamic, responsive web applications using React and Tailwind CSS. The platform allows users to browse various holiday destinations and make bookings directly through the site. I integrated API calls for fetching venue data, and focused on creating a clean, responsive user interface with smooth transitions.",
-    descriptionSmall: "A user-friendly holiday venue booking platform built with React and Tailwind CSS, featuring dynamic API integration for browsing and booking venues.",
-    skills: ["React", "Tailwind", "Vite"],
-    demoLink: "https://holidaze-pe2-rh.netlify.app/",
-    codeLink: "https://github.com/renahashimi/holidaze-pe2.git",
-  },
-  {
-    id: 2,
-    name: "Lunaura",
-    title: "JavaScript Frameworks",
-    image: "/Lunaura.jpg",
-    description: "Lunaura is a fully functional eCommerce website I developed during my intensive React learning module. This project required me to implement React in combination with Tailwind CSS and Styled-components to create a responsive, styled, and highly interactive online store. The website allows users to browse products, add them to the cart, and proceed to checkout. I utilized state management with React hooks, ensuring smooth updates to the user interface as users interact with the site. Lunaura helped me solidify my understanding of React's component-based architecture and advanced styling techniques.",
-    descriptionSmall: "An eCommerce site developed with React, Tailwind CSS, and Styled-components, allowing users to browse products, add them to their cart, and proceed to checkout.",
-    skills: ["React", "Tailwind", "Vite", "Styled-components"],
-    demoLink: "https://lunaura-rh-reactapp.netlify.app",
-    codeLink: "https://github.com/renahashimi/fed-frameworks-ca.git",
-  },
-  {
-    id: 3,
-    name: "Midas Touch",
-    title: "Semester Project 2",
-    image: "/MidasTouch.jpeg",
-    description: "Midas Touch is a web-based auction platform where users can list items, place bids, and manage their auctions. The site simulates a real auction environment, with users starting with 1000 credits, which they can use to bid on listings. This project allowed me to hone my skills in JavaScript, Bootstrap, Sass, and web development fundamentals such as forms, state management, and user authentication. I implemented a bidding system, allowing users to interact with listings and keep track of their credits and bids in real-time.",
-    descriptionSmall: "A web-based auction platform where users can list items and place bids, utilizing JavaScript, Bootstrap, and Sass to create a real-time bidding environment.",
-    skills: ["JavaScript", "Bootstrap", "Sass", "HTML", "CSS"],
-    demoLink: "https://midastouch-rh-sp2.netlify.app/",
-    codeLink: "https://github.com/renahashimi/SemesterProject2.git",
-  },
-];
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -43,8 +10,8 @@ function Projects() {
   return (
     <section id="projects" className="min-h-screen flex flex-col items-center justify-center text-white">
       <h2
-        className="mb-10 text-7xl md:text-8xl text-white tracking-wider font-allison font-bold text-center pt-[60px]"
-        style={{ textShadow: "5px 8px 2px #6E5D5D, 2px 2px 2px #B000B0" }}
+        className="mb-10 text-6xl sm:text-7xl md:text-8xl text-white tracking-wider font-allison font-bold text-center pt-[60px]"
+        style={{ textShadow: "5px 8px 2px #6E5D5D" }}
       >
         My Projects
       </h2>
@@ -63,31 +30,21 @@ function Projects() {
             />
               <div className="md:w-1/2 flex flex-col md:ms-6 lg:ms-0 lg:block lg:w-full items-center lg:items-start">
                 <h3 className="text-xl font-black uppercase font-lora text-black mt-5 pb-2 border-b-2 border-custom-dark">{project.name}</h3>
-                <h4 className="text-xl font-semibold font-lora py-2 text-custom-dark h-[50px]">{project.title}</h4>
+                <h4 className="text-lg font-semibold font-lora py-2 text-custom-dark h-[50px]">{project.title}</h4>
                 
-                <p className="text-sm font-lora py-2 text-black p-2 md:h-[80px]">{project.descriptionSmall}</p>
+                <p className="text-sm font-lora py-2 text-black p-2 md:h-[120px]">{project.descriptionSmall}</p>
 
-                <div className="flex justify-between lg:justify-evenly mx-auto mt-6 mb-4 font-semibold font-prata">
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-b-2 border-custom-dark text-black uppercase mr-4 px-2 py-1 text-sm hover:text-custom-dark"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.codeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-b-2 border-custom-dark text-black uppercase px-2 py-1 text-sm hover:text-custom-dark"
-                  >
-                    GitHub
-                  </a>
-                </div>
+                <div className="flex justify-center my-2 space-x-4">
+                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center border-2 border-black max-w-1/2 text-black px-2 py-1 rounded-lg hover:bg-custom-dark transition">
+                <FaExternalLinkAlt className="mr-2" /> Live Demo
+              </a>
+              <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="flex items-center bg-gray-900 text-white px-2 py-1 rounded-lg hover:bg-custom-dark transition">
+                <FaGithub className="mr-2" /> GitHub
+              </a>
+            </div>
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="mt-4 px-4 py-2 text-black bg-custom-light font-black uppercase rounded-lg hover:bg-custom-dark hover:border-white hover:text-white transition-all w-full"
+                  className="my-3 px-4 py-2 text-black bg-custom-light font-black uppercase rounded-lg hover:bg-custom-dark hover:border-white hover:text-white transition-all w-full"
                 >
                   Read More
                 </button>
@@ -104,10 +61,10 @@ function Projects() {
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="bg-custom-light text-black font-lora p-6 w-full overflow-y-auto max-h-[80vh] relative"
+            className="bg-custom-light text-black font-lora p-6 w-full overflow-y-auto max-h-[80vh] max-w-[95%]  relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-2xl uppercase font-bold mb-4">{selectedProject.name} - {selectedProject.title}</h2>
+            <h2 className="text-base sm:text-2xl uppercase font-bold mb-4">{selectedProject.name} - {selectedProject.title}</h2>
 
             <div className="flex flex-col lg:flex-row">
               {/* Image */}
@@ -120,40 +77,32 @@ function Projects() {
 
               {/* Content */}
               <div className="lg:w-1/2">
-                <p className="text-xl text-black lg:text-xl mb-4">{selectedProject.description}</p>
-                <p className="text-xl mt-10 font-semibold">Techs:</p>
-                <ul className="flex gap-2 mt-2 mb-4 font-semibold">
+              <p className="text-lg font-play my-2 font-semibold bg-custom-medium/20  uppercase">Description</p>
+                <p className="text-sm md:text-xl text-black lg:text-xl mb-4">{selectedProject.description}</p>
+                <p className="text-lg font-play my-2 font-semibold bg-custom-medium/20 p-1 mt-10 uppercase">Created with</p>
+                <ul className="flex flex-wrap gap-2 mt-2 mb-4 font-semibold">
                   {selectedProject.skills.map((skill, index) => (
-                    <li key={index} className="bg-custom-dark uppercase px-2 py-1 rounded text-sm md:text-lg">
+                    <li key={index} className="border-2 border-custom-dark uppercase mt-2 px-2 py-1 rounded text-sm md:text-lg">
                       {skill}
                     </li>
                   ))}
                 </ul>
-                <p className="text-xl mt-10 font-semibold">Links:</p>
-                <div className="flex gap-2 mt-2 mb-4 font-semibold">
-                  <a
-                    href={selectedProject.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-custom-dark uppercase px-2 py-1 rounded text-sm md:text-lg hover:underline"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href={selectedProject.codeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-custom-dark uppercase px-2 py-1 rounded text-sm md:text-lg hover:underline"
-                  >
-                    GitHub
-                  </a>
-                </div>
+                <p className="text-lg font-play my-2 font-semibold bg-custom-medium/20 p-1 mt-10 uppercase">Links</p>
+                <div className="block sm:flex gap-2 mt-4 mb-4 font-semibold">
+          
+              <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center border-2 border-black max-w-1/2 text-black px-2 py-1 rounded-lg mb-3 sm:mb-0 hover:bg-custom-dark transition">
+                <FaExternalLinkAlt className="mr-2" /> Live Demo
+              </a>
+              <a href={selectedProject.codeLink} target="_blank" rel="noopener noreferrer" className="flex items-center bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-custom-dark transition">
+                <FaGithub className="mr-2" /> GitHub
+              </a>
+            </div>
               </div>
             </div>
 
             <button
               onClick={() => setSelectedProject(null)}
-              className="mt-4 px-4 py-2 text-black text-lg bg-custom-medium hover:bg-custom-dark border-2 border-custom-light font-black uppercase rounded-lg hover:bg-custom-dark hover:border-2 hover:border-black hover:text-white transition-all w-full"
+              className="flex w-3/4 mx-auto justify-center mt-4 px-4 py-2 text-black text-lg bg-custom-medium hover:bg-custom-dark border-2 border-custom-light font-black uppercase rounded-lg hover:bg-custom-dark hover:border-2 hover:border-black hover:text-white transition-all w-full"
             >
               Close
             </button>

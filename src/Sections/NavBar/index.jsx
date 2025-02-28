@@ -10,7 +10,6 @@ function NavBar() {
         {/* Logo & Name */}
         <div className="flex items-center">
           <img src="/logo2.png" alt="Logo" className="w-12 h-auto"/>
-          {/* Make the h2 clickable and link to #home */}
           <a href="#home">
             <h2 className="text-custom-light font-prata ms-3 mt-2">Rena Hashimi</h2>
           </a>
@@ -34,12 +33,12 @@ function NavBar() {
         origin-top md:origin-center backdrop-blur-md shadow-lg md:shadow-none rounded-md md:rounded-none`}
         aria-label="Main Navigation"
       >
-        <ul className="flex flex-col md:flex-row md:space-x-8 text-center md:text-left p-4 md:p-0">
-          <li><a href="#projects" className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">Projects</a></li>
-          <li><a href="#skills" className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">Skills</a></li>
-          <li><a href="#about" className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">About Me</a></li>
-          <li><a href="#contact" className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">Contact</a></li>
-        </ul>
+      <ul className="flex flex-col md:flex-row md:space-x-8 text-center md:text-left p-4 md:p-0">
+        <li><a href="#projects" onClick={() => setIsOpen(false)} className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">Projects</a></li>
+        <li><a href="#skills" onClick={() => setIsOpen(false)} className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">Skills</a></li>
+        <li><a href="#about" onClick={() => setIsOpen(false)} className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">About Me</a></li>
+        <li><a href="#contact" onClick={() => setIsOpen(false)} className="block py-6 md:py-0 px-2 hover:text-gray-400 transition">Contact</a></li>
+      </ul>
       </nav>
     </header>
   );
