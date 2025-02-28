@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "./Sections/NavBar";
 import HeroSection from "./Sections/HeroSection";
 import Skills from "./Sections/Skills";
@@ -8,13 +8,43 @@ import Contact from "./Sections/Contact";
 import GoUpButton from "./Helpers/GoUpBtn";
 
 function App() {
+  const [showLogo, setShowLogo] = useState(true);
+
+  // Hide the logo after a brief delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLogo(false);
+    }, 3000); // Hide after 3 seconds or as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="bg-black">
+      {/* Display Logo */}
+      {showLogo && (
+        <div className="fixed inset-0 flex justify-center items-center z-50 bg-[#111111]">
+          <div className="block">
+
+                      <img src="/logo2.png" alt="Rena Hashimi Logo" id="logo" />
+          <h1
+          className="my-5 text-center text-4xl md:text-6xl font-bold mb-4 font-prata text-custom-medium pt-1 tracking-wider"
+          style={{
+            textShadow: "3px 0 0px #fff",
+          }}
+        >
+          RENA HASHIMI
+        </h1>
+          </div>
+
+        </div>
+      )}
+
       {/* Main Content */}
-      <div className="relative z-10 bg-black max-w-[1400px] mx-auto border-4 border-custom-medium shadow-[0_0_35px_#998787] transition-all duration-300">
+      <div className="relative z-10 bg-[#111111] max-w-[1400px] mx-auto border-4 border-custom-medium shadow-[0_0_35px_#998787] transition-all duration-300">
         
         {/* Navbar */}
-        <div className="py-5">
+        <div>
           <NavBar />
         </div>
 
@@ -44,7 +74,7 @@ function App() {
         </div>
 
         {/* Helpers */}
-          <GoUpButton />
+        <GoUpButton />
       </div>
     </div>
   );
