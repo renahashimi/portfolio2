@@ -12,29 +12,45 @@ function AboutMe() {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-10 mt-[60px]">
         {/* Image */}
         <img 
-          src="/myImg.png" 
+          src="/myImg.jpeg" 
           alt="Img" 
-          className="w-48 md:w-60 lg:w-72 h-auto rounded-full opacity-85 object-cover md:rounded-none md:border-2 md:border-custom-dark md:shadow-[0_0_5px_#998787] md:mt-[50px] transition-all duration-300"
+          className="w-48 md:w-60 lg:w-72 h-auto rounded-full opacity-85 object-cover md:mt-[40px]"
         />
 
-        {/* Content */}
-        <div className="max-w-lg text-center md:text-left font-lora text-lg space-y-4 p-3">
-          <p className="text-2xl font-black text-custom-light">Hi, I'm Rena!</p>
+     {/* Content */}
+<div className="max-w-lg text-center md:text-left font-lora text-lg space-y-4 p-3">
 
-          <p>
-            I'm a front-end developer passionate about building clean, responsive, and user-friendly websites. I specialize in HTML, CSS, JavaScript, and React to create seamless digital experiences.
-          </p>
+<p className="text-2xl font-black text-custom-light">Hi, I'm Rena!</p>
 
-          <p>
-            I’m currently studying <span className="font-semibold">Front-End Development</span> at <span className="font-semibold">Noroff School of Technology and Digital Media</span>, expecting to graduate in <span className="font-semibold">March 2025</span>. My studies have given me hands-on experience in modern web technologies, UI/UX design, and problem-solving through code.
-          </p>
+<p>
+  I'm a front-end developer passionate about building clean, responsive, and user-friendly websites. 
+  I specialize in HTML, CSS, JavaScript, and React to craft seamless digital experiences.
+</p>
 
-          <p>
-            I love learning new technologies and staying up-to-date with the latest design trends. When I’m not coding, I explore design aesthetics and refine my creative skills.
-          </p>
+<p>
+  I stay up-to-date with the latest technologies and design trends to continually improve my craft. 
+  When I'm not coding, I dive into design aesthetics to refine my creative skills and expand my knowledge.
+</p>
 
-        </div>
+<p>
+  I approach design with clarity and simplicity, aiming to create intuitive user experiences. 
+  Every project is an opportunity to blend creativity with functionality—writing code that not only works but feels right.
+</p>
+
+
+</div>
+
       </div>
+       {/* Education Section */}
+  <div className="block font-lora items-center text-center md:text-start max-w-lg lg:max-w-[700px]">
+    <h3 className="text-xl font-play font-bold text-custom-medium mt-10 mb-3">EDUCATION</h3>
+    <p className="font-semibold">Front-End Development</p>
+    <p className="mt-2 text-lg font-prata">Noroff School of Technology and Digital Media</p>
+    <p className="text-base text-custom-light mt-2">
+      Gained hands-on experience in modern web technologies, UI/UX principles, and problem-solving through code.
+    </p>
+
+  </div>
     </section>
   );
 }
