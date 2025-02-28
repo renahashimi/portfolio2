@@ -8,7 +8,7 @@ function Projects() {
   const [showFullImage, setShowFullImage] = useState(null);
 
   return (
-    <section id="projects" className="min-h-screen flex flex-col items-center justify-center text-white">
+    <section id="projects" className="m-h-screen flex flex-col items-center justify-center text-white pt-[100px]">
       <h2
         className="mb-10 text-6xl sm:text-7xl md:text-8xl text-white tracking-wider font-allison font-bold text-center pt-[60px]"
         style={{ textShadow: "5px 8px 2px #6E5D5D" }}
@@ -32,24 +32,25 @@ function Projects() {
                 <h3 className="text-xl font-black uppercase font-lora text-black mt-5 pb-2 border-b-2 border-custom-dark">{project.name}</h3>
                 <h4 className="text-lg font-semibold font-lora py-2 text-custom-dark h-[50px]">{project.title}</h4>
                 
-                <p className="text-sm font-lora py-2 text-black p-2 md:h-[120px]">{project.descriptionSmall}</p>
+                <p className="md:text-base font-lora py-2 text-black p-2 md:h-[120px]">{project.descriptionSmall}</p>
 
                 <div className="flex justify-center my-2 space-x-4">
-                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center border-2 border-black max-w-1/2 text-black px-2 py-1 rounded-lg hover:bg-custom-dark transition">
+                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center border-2 border-black max-w-1/2 text-black px-2 py-1 rounded-lg hover:bg-custom-dark hover:text-white transition">
                 <FaExternalLinkAlt className="mr-2" /> Live Demo
               </a>
-              <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="flex items-center bg-gray-900 text-white px-2 py-1 rounded-lg hover:bg-custom-dark transition">
+              <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="flex items-center bg-gray-900 text-white border-2 border-black px-2 py-1 rounded-lg hover:bg-custom-dark transition">
                 <FaGithub className="mr-2" /> GitHub
               </a>
             </div>
-                <button
+              </div>
+              
+            </div>
+            <button
                   onClick={() => setSelectedProject(project)}
-                  className="my-3 px-4 py-2 text-black bg-custom-light font-black uppercase rounded-lg hover:bg-custom-dark hover:border-white hover:text-white transition-all w-full"
+                  className="my-3 px-4 py-2 text-black bg-custom-light font-black uppercase rounded-lg hover:bg-custom-dark hover:border-white hover:text-white transition-all w-3/4"
                 >
                   Read More
                 </button>
-              </div>
-            </div>
           </div>
         ))}
       </div>
@@ -90,10 +91,10 @@ function Projects() {
                 <p className="text-lg font-play my-2 font-semibold bg-custom-medium/20 p-1 mt-10 uppercase">Links</p>
                 <div className="block sm:flex gap-2 mt-4 mb-4 font-semibold">
           
-              <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center border-2 border-black max-w-1/2 text-black px-2 py-1 rounded-lg mb-3 sm:mb-0 hover:bg-custom-dark transition">
+              <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center border-2 border-black max-w-1/2 text-black px-2 py-1 rounded-lg mb-3 sm:mb-0 hover:bg-custom-dark hover:text-white transition">
                 <FaExternalLinkAlt className="mr-2" /> Live Demo
               </a>
-              <a href={selectedProject.codeLink} target="_blank" rel="noopener noreferrer" className="flex items-center bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-custom-dark transition">
+              <a href={selectedProject.codeLink} target="_blank" rel="noopener noreferrer" className="flex items-center border-2 border-black bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-custom-dark hover:border-black transition">
                 <FaGithub className="mr-2" /> GitHub
               </a>
             </div>
