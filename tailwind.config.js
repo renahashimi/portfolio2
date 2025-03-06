@@ -23,7 +23,7 @@ module.exports = {
         black: 900,
       },
       colors: {
-        'custom-light': '#BBAFAF',
+        'custom-light': '#C7BDBD',
         'custom-medium': '#998787',
         'custom-dark': '#6E5D5D',
       },
