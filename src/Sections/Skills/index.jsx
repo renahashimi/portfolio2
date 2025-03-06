@@ -91,14 +91,14 @@ function Skills() {
   };
 
   return (
-    <div id="skills" className="h-screen flex flex-col items-center justify-center text-white pt-[150px] mt-[150px] sm:mt-0 md:pt-0">
+    <div id="skills" className="min-h-screen flex flex-col items-center justify-center text-white pt-[50px] md:pt-0">
       <h2
         className="mb-10 text-7xl md:text-8xl text-white tracking-wider font-allison font-bold text-center pt-[60px]"
         style={{ textShadow: "5px 8px 4px #6E5D5D" }}
       >
         Tech Stack
       </h2>
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 lg:gap-x-12 text-center items-center pt-[60px]">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 lg:gap-x-12 text-center items-center pt-[60px] mb-[200px] sm:mb-0">
         <SkillCard icon={<FaHtml5 className={iconColors.html} />} name="HTML" />
         <SkillCard icon={<FaCss3Alt className={iconColors.css} />} name="CSS" />
         <SkillCard icon={<FaJs className={iconColors.js} />} name="JavaScript" />
