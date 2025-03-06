@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { 
   FaHtml5, FaCss3Alt, FaJs, FaWordpress, FaFigma, 
-  FaGithub, FaBootstrap, FaSass, FaTrello, FaReact 
+  FaGithub, FaBootstrap, FaSass, FaTrello, FaReact, FaNodeJs 
 } from "react-icons/fa";
-import { SiNetlify, SiTailwindcss, SiVite } from "react-icons/si";
+import { SiNetlify, SiTailwindcss, SiVite, SiPrettier, SiEslint, SiJest, SiCypress, SiNotion, SiStyledcomponents } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
+import { TbApi } from "react-icons/tb";
+
 
 /**
  * The Skills component renders a list of tech stack icons and their names.
@@ -16,16 +18,24 @@ function Skills() {
     css: "text-blue-500",
     js: "text-yellow-500",
     react: "text-blue-400",
+    node: "text-green-700",
     wordpress: "text-blue-600",
-    figma: "text-pink-400",
+    figma: "text-orange-500",
     github: "text-gray-300",
-    vscode: "text-blue-500",
-    netlify: "text-green-400",
+    vscode: "text-sky-400",
+    netlify: "text-teal-400",
     bootstrap: "text-purple-600",
     tailwind: "text-blue-600",
+    api: "text-white",
     sass: "text-pink-500",
+    prettier: "text-yellow-400",
+    styled: "text-pink-400",
+    eslint: "text-indigo-800",
     trello: "text-blue-500",
+    notion: "text-gray-600",
     vite: "text-yellow-500",
+    jest: "text-red-900",
+    cypress: "text-green-600"
   });
 
   /**
@@ -36,7 +46,7 @@ function Skills() {
     const colorInterval = setInterval(() => {
       setIconColors((prevColors) => {
         const newColors = Object.keys(prevColors).reduce((acc, key) => {
-          acc[key] = prevColors[key] === "text-custom-dark" ? getOriginalColor(key) : "text-custom-dark";
+          acc[key] = prevColors[key] === "text-custom-medium" ? getOriginalColor(key) : "text-custom-medium";
           return acc;
         }, {});
 
@@ -58,43 +68,59 @@ function Skills() {
       css: "text-blue-500",
       js: "text-yellow-500",
       react: "text-blue-400",
+      node: "text-green-700",
       wordpress: "text-blue-600",
-      figma: "text-pink-400",
+      figma: "text-orange-500",
       github: "text-gray-300",
-      vscode: "text-blue-500",
-      netlify: "text-green-400",
+      vscode: "text-sky-400",
+      netlify: "text-teal-400",
       bootstrap: "text-purple-600",
       tailwind: "text-blue-600",
+      api: "text-white",
       sass: "text-pink-500",
+      prettier: "text-yellow-400",
+      styled: "text-pink-400",
+      eslint: "text-indigo-800",
       trello: "text-blue-500",
+      notion: "text-gray-600",
       vite: "text-yellow-500",
+      jest: "text-red-900",
+      cypress: "text-green-600"
     };
     return originalColors[key];
   };
 
   return (
-    <div id="skills" className="h-screen flex flex-col items-center justify-center text-white">
+    <div id="skills" className="h-screen flex flex-col items-center justify-center text-white pt-[150px] mt-[150px] sm:mt-0 md:pt-0">
       <h2
         className="mb-10 text-7xl md:text-8xl text-white tracking-wider font-allison font-bold text-center pt-[60px]"
-        style={{ textShadow: "5px 8px 6px #6E5D5D" }}
+        style={{ textShadow: "5px 8px 4px #6E5D5D" }}
       >
-        My Tech Stack
+        Tech Stack
       </h2>
-      <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 gap-6 lg:gap-x-12 text-center items-center pt-[60px]">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 lg:gap-x-12 text-center items-center pt-[60px]">
         <SkillCard icon={<FaHtml5 className={iconColors.html} />} name="HTML" />
         <SkillCard icon={<FaCss3Alt className={iconColors.css} />} name="CSS" />
         <SkillCard icon={<FaJs className={iconColors.js} />} name="JavaScript" />
         <SkillCard icon={<FaReact className={iconColors.react} />} name="React" />
+        <SkillCard icon={<FaNodeJs className={iconColors.node} />} name="NodeJs" />
         <SkillCard icon={<SiVite className={iconColors.vite} />} name="Vite" />
         <SkillCard icon={<VscVscodeInsiders className={iconColors.vscode} />} name="VSCode" />
         <SkillCard icon={<FaGithub className={iconColors.github} />} name="GitHub" />
         <SkillCard icon={<SiNetlify className={iconColors.netlify} />} name="Netlify" />
         <SkillCard icon={<FaBootstrap className={iconColors.bootstrap} />} name="Bootstrap" />
         <SkillCard icon={<SiTailwindcss className={iconColors.tailwind} />} name="Tailwind" />
+        <SkillCard icon={<TbApi className={iconColors.api} />} name="API" />
         <SkillCard icon={<FaWordpress className={iconColors.wordpress} />} name="WordPress" />
         <SkillCard icon={<FaFigma className={iconColors.figma} />} name="Figma" />
         <SkillCard icon={<FaSass className={iconColors.sass} />} name="SASS" />
+        <SkillCard icon={<SiPrettier className={iconColors.prettier} />} name="Prettier" />
+        <SkillCard icon={<SiStyledcomponents className={iconColors.styled} />} name="StyledC." />
+        <SkillCard icon={<SiEslint className={iconColors.eslint} />} name="EsLint" />
         <SkillCard icon={<FaTrello className={iconColors.trello} />} name="Trello" />
+        <SkillCard icon={<SiNotion className={iconColors.notion} />} name="Notion" />
+        <SkillCard icon={<SiJest className={iconColors.jest} />} name="Jest" />
+        <SkillCard icon={<SiCypress className={iconColors.cypress} />} name="Cypress" />
       </div>
     </div>
   );
