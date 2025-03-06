@@ -46,7 +46,7 @@ function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="md:w-1/2 lg:w-full h-full max-h-[330px] lg:h-[230px] object-cover mb-4 lg:mb-0 md:w-1/2 lg:mr-4 border-2 border-custom-dark cursor-pointer shadow-lg shadow-black"
+                className="md:w-1/2 lg:w-full h-auto lg:h-[280px] object-cover mb-4 lg:mb-0 lg:mr-4 border-2 border-custom-dark cursor-pointer shadow-lg shadow-black"
                 onClick={() => setSelectedProject(project)}
               />
               <div className="md:w-1/2 flex flex-col md:ms-6 lg:ms-0 lg:block lg:w-full items-center lg:items-start">
