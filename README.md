@@ -6,7 +6,7 @@ Welcome to my portfolio! Here, I showcase various projects I've worked on, demon
 
 ## Brief
 
-In this assignment, we will be documenting three prior submissions from the first year:
+In this assignment, I will be documenting three prior submissions from the first year:
 
 - Semester Project 2
 - JavaScript Frameworks CA
@@ -17,8 +17,6 @@ In this assignment, we will be documenting three prior submissions from the firs
 [LINK - Netlify ](https://portfolio-renahashimi.netlify.app/)
 
 ## Installing
-
-In the project directory, you can run:
 
 ### Cloning the Repository
 
