@@ -7,14 +7,24 @@ import AboutMe from "./Sections/AboutMe";
 import Contact from "./Sections/Contact";
 import GoUpButton from "./Helpers/GoUpBtn";
 
+/**
+ * App component that serves as the main entry point for the application.
+ * It includes various sections such as the NavBar, HeroSection, Skills, Projects, AboutMe, and Contact.
+ * Additionally, a GoUpButton helper is included for smooth scrolling to the top.
+ *
+ * @component
+ * @example
+ * return (
+ *   <App />
+ * )
+ */
 function App() {
   const [showLogo, setShowLogo] = useState(true);
 
-  // Hide the logo after a brief delay
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLogo(false);
-    }, 3000); // Hide after 3 seconds or as needed
+    }, 3000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -24,20 +34,19 @@ function App() {
       {/* Display Logo */}
       {showLogo && (
         <div className="fixed inset-0 flex justify-center items-center z-50 bg-[#111111]">
-          <div className="block">
+  <div className="block">
+    <img src="/logo2.png" alt="Rena Hashimi Logo" id="logo" />
+    <h1
+      className="my-5 text-center text-4xl md:text-6xl font-bold mb-4 font-prata text-[#777777] pt-1 tracking-wider"
+      style={{
+        textShadow: "3px 0 0px #fff",
+      }}
+    >
+      RENA HASHIMI
+    </h1>
+  </div>
+</div>
 
-                      <img src="/logo2.png" alt="Rena Hashimi Logo" id="logo" />
-          <h1
-          className="my-5 text-center text-4xl md:text-6xl font-bold mb-4 font-prata text-custom-medium pt-1 tracking-wider"
-          style={{
-            textShadow: "3px 0 0px #fff",
-          }}
-        >
-          RENA HASHIMI
-        </h1>
-          </div>
-
-        </div>
       )}
 
       {/* Main Content */}

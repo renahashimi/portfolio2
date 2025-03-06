@@ -1,3 +1,22 @@
+/**
+ * @typedef {Object} Project
+ * @property {number} id - Unique identifier for the project.
+ * @property {string} name - The name of the project.
+ * @property {string} title - The project category or type.
+ * @property {string} image - The URL or path to the project's image.
+ * @property {string} description - A detailed description of the project.
+ * @property {string} descriptionSmall - A short summary of the project.
+ * @property {string[]} skills - An array of technologies used in the project.
+ * @property {string} demoLink - The URL of the live project demo.
+ * @property {string} codeLink - The URL to the project's source code repository.
+ */
+
+/**
+ * An array of projects showcasing different development works.
+ * @type {Project[]}
+ */
+
+
 const projects = [
   {
     id: 1,
@@ -6,7 +25,7 @@ const projects = [
     image: "/Holidaze.jpg",
     description: "Holidaze is a modern, user-friendly holiday venue booking platform I built as part of my final exam in Front-End Development at Noroff. The goal of the project was to demonstrate my ability to create dynamic, responsive web applications using React and Tailwind CSS. The platform allows users to browse various holiday destinations and make bookings directly through the site. I integrated API calls for fetching venue data, and focused on creating a clean, responsive user interface with smooth transitions.",
     descriptionSmall: "A user-friendly holiday venue booking platform built with React and Tailwind CSS, featuring dynamic API integration for browsing and booking venues.",
-    skills: ["React", "Tailwind", "Vite"],
+    skills: ["React", "Tailwind", "Vite", "API"],
     demoLink: "https://holidaze-pe2-rh.netlify.app/",
     codeLink: "https://github.com/renahashimi/holidaze-pe2.git",
   },
@@ -17,7 +36,7 @@ const projects = [
     image: "/Lunaura.jpg",
     description: "Lunaura is a fully functional eCommerce website I developed during my intensive React learning module. This project required integrating an external API, implementing dynamic routing, and managing state efficiently with React. The store offers various beauty products, with features like filtering, a detailed product view, and a smooth checkout process.",
     descriptionSmall: "An eCommerce beauty store built using React, featuring API integration, filtering, and a seamless checkout experience.",
-    skills: ["React", "Styled Components", "API"],
+    skills: ["React", "Tailwind", "Styled Components", "API"],
     demoLink: "https://lunaura-jsf-rh.netlify.app/",
     codeLink: "https://github.com/renahashimi/lunaura-jsf.git",
   },
