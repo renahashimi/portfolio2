@@ -38,7 +38,7 @@ const projects = [
     descriptionSmall: "An eCommerce beauty store built using React, featuring API integration, filtering, and a seamless checkout experience.",
     skills: ["React", "Tailwind", "Styled Components", "Vite", "API"],
     demoLink: "https://lunaura-jsf-rh.netlify.app/",
-    codeLink: "https://github.com/renahashimi/lunaura-jsf.git",
+    codeLink: "https://github.com/renahashimi/fed-frameworks-ca.git",
   },
   {
     id: 3,
