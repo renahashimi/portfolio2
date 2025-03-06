@@ -37,7 +37,7 @@ function App() {
   <div className="block">
     <img src="/logo2.png" alt="Rena Hashimi Logo" id="logo" />
     <h1
-      className="my-5 text-center text-4xl md:text-6xl font-bold mb-4 font-prata text-[#777777] pt-1 tracking-wider"
+      className="my-5 text-center text-4xl md:text-6xl font-bold mb-4 font-prata text-[#757575] pt-1 tracking-wider"
       style={{
         textShadow: "3px 0 0px #fff",
       }}
