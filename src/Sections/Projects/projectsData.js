@@ -36,7 +36,7 @@ const projects = [
     image: "/Lunaura.jpg",
     description: "Lunaura is a fully functional eCommerce website I developed during my intensive React learning module. This project required integrating an external API, implementing dynamic routing, and managing state efficiently with React. The store offers various beauty products, with features like filtering, a detailed product view, and a smooth checkout process.",
     descriptionSmall: "An eCommerce beauty store built using React, featuring API integration, filtering, and a seamless checkout experience.",
-    skills: ["React", "Tailwind", "Styled Components", "API"],
+    skills: ["React", "Tailwind", "Styled Components", "Vite", "API"],
     demoLink: "https://lunaura-jsf-rh.netlify.app/",
     codeLink: "https://github.com/renahashimi/lunaura-jsf.git",
   },
