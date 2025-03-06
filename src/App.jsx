@@ -35,7 +35,7 @@ function App() {
       {showLogo && (
         <div className="fixed inset-0 flex justify-center items-center z-50 bg-[#111111]">
   <div className="block">
-    <img src="/logo2.png" alt="Rena Hashimi Logo" id="logo" />
+    <img src="/logo2.png" alt="Rena Hashimi Logo" id="logo" className="max-h-[400px] mx-auto" />
     <h1
       className="my-5 text-center text-4xl md:text-6xl font-bold mb-4 font-prata text-[#757575] pt-1 tracking-wider"
       style={{
