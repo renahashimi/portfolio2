@@ -28,8 +28,7 @@ function AboutMe() {
         {/* Profile Image */}
         <img
           src="/myImg.jpeg"
-          alt="Profile Image"
-          className="w-48 md:w-60 lg:w-72 h-auto rounded-full opacity-85 object-cover md:mt-[40px]"
+          alt="Rena Hashimi, Front-End Developer"          className="w-48 md:w-60 lg:w-72 h-auto rounded-full opacity-85 object-cover md:mt-[40px]"
         />
 
         {/* Description Content */}
