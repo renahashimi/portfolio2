@@ -46,7 +46,7 @@ function GoUpButton() {
     showButton && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-10 right-10 bg-custom-light text-black text-4xl py-3 px-4 rounded-full shadow-lg hover:bg-white border-4 border-black hover:shadow-[0_0_25px_#996689] md:mt-[50px] transition-all duration-300"
+        className="fixed bottom-5 right-5 bg-custom-light text-black text-4xl py-1 px-2 rounded-full shadow-lg hover:bg-white border-4 border-black hover:shadow-[0_0_25px_#996689] md:mt-[50px] transition-all duration-300"
         aria-label="Scroll to top"
       >
         ↑

@@ -52,9 +52,9 @@ function Skills() {
 
         return newColors;
       });
-    }, 5000); // 5 seconds interval for color change
+    }, 5000); 
 
-    return () => clearInterval(colorInterval); // Cleanup interval on component unmount
+    return () => clearInterval(colorInterval); 
   }, []);
 
   /**
