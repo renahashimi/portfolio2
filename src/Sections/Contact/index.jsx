@@ -11,7 +11,7 @@ import { FaEnvelope, FaGithub, FaInstagram } from "react-icons/fa";
 function Contact() {
   return (
     <section id="contact" className="flex flex-col items-center justify-center text-black bg-custom-medium mt-[100px] pb-[150px]">
-      <h2 className="mb-10 text-5xl md:text-7xl text-black tracking-wider font-allison font-bold text-center pt-[60px]" 
+      <h2 className="mb-10 text-6xl md:text-7xl text-black tracking-wider font-allison font-bold text-center pt-[60px]" 
         style={{ textShadow: "5px 8px 2px #6E5D5D"}}
         >
         Connect with me
